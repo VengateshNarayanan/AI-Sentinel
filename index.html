@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sentinel | Phishing & Scam Detection</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            🛡️ AI Sentinel
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            AI Protection Active
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="tag">AI-POWERED SECURITY</p>
+
+            <h1>
+                Detect Phishing & Scams
+                <span>Before It's Too Late.</span>
+            </h1>
+
+            <p class="subtitle">
+                Analyze suspicious emails and messages using AI-powered
+                security analysis and receive an instant threat assessment.
+            </p>
+        </section>
+
+
+        <section class="analyzer-card">
+
+            <div class="card-header">
+                <div>
+                    <h2>Analyze Message</h2>
+                    <p>Paste the suspicious email or message below.</p>
+                </div>
+
+                <div class="shield-icon">
+                    🛡️
+                </div>
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="subject">Email Subject</label>
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Example: Urgent! Verify your account"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="sender">Sender</label>
+
+                <input
+                    type="text"
+                    id="sender"
+                    placeholder="Example: support@example.com"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="message">Email / Message</label>
+
+                <textarea
+                    id="message"
+                    rows="10"
+                    placeholder="Paste the email or suspicious message here..."
+                ></textarea>
+
+            </div>
+
+
+            <button id="analyzeBtn" class="analyze-btn">
+                <span id="buttonText">🔍 Analyze Message</span>
+                <span id="loader" class="loader hidden"></span>
+            </button>
+
+        </section>
+
+
+        <section id="resultSection" class="result-section hidden">
+
+            <div class="result-header">
+                <div>
+                    <p class="tag">AI SECURITY ANALYSIS</p>
+                    <h2>Threat Assessment</h2>
+                </div>
+
+                <div id="riskBadge" class="risk-badge">
+                    UNKNOWN
+                </div>
+            </div>
+
+
+            <div class="result-grid">
+
+                <div class="result-box">
+                    <h3>Category</h3>
+                    <p id="category">-</p>
+                </div>
+
+                <div class="result-box">
+                    <h3>Risk Score</h3>
+                    <p id="riskScore">-</p>
+                </div>
+
+            </div>
+
+
+            <div class="result-box">
+                <h3>Detected Indicators</h3>
+
+                <ul id="indicatorsList">
+                </ul>
+            </div>
+
+
+            <div class="result-box">
+                <h3>AI Explanation</h3>
+
+                <p id="explanation">
+                    -
+                </p>
+            </div>
+
+
+            <div class="recommendation">
+                <h3>⚠️ Recommended Action</h3>
+
+                <p id="recommendation">
+                    -
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="info-section">
+
+            <div class="info-card">
+                <span>🤖</span>
+                <h3>AI Analysis</h3>
+                <p>
+                    Uses AI to understand suspicious language,
+                    requests and social-engineering patterns.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <span>🔍</span>
+                <h3>Threat Detection</h3>
+                <p>
+                    Identifies indicators commonly associated
+                    with phishing and scam messages.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <span>⚡</span>
+                <h3>Instant Assessment</h3>
+                <p>
+                    Receive a structured security assessment
+                    within seconds.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            AI Sentinel • AI-Powered Phishing & Scam Detection
+        </p>
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
